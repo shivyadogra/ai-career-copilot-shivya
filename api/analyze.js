@@ -30,11 +30,10 @@ export default async function handler(request, response) {
               text: `Resume:\n${resume}\n\nJob Description:\n${jobDesc}`
             }]
           }],
-         generationConfig: {
-  maxOutputTokens: 1024,
-  thinkingConfig: {
-    thinkingLevel: "low"
-  }
+generationConfig: {
+  temperature: 0.2,
+  maxOutputTokens: 2048,
+  responseMimeType: "application/json"
 }
         })
       }
